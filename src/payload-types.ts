@@ -50,7 +50,7 @@ export interface Config {
     header: HeaderSelect<false> | HeaderSelect<true>;
     footer: FooterSelect<false> | FooterSelect<true>;
   };
-  locale: 'en' | 'es' | 'de' | 'ja' | 'ar';
+  locale: 'en' | 'es' | 'de';
   user: User & {
     collection: 'users';
   };

@@ -18,15 +18,15 @@ const localization = {
       code: 'de',
       label: 'German (Deutsch)',
     },
-    {
-      code: 'ja',
-      label: 'Japanese (日本語)',
-    },
-    {
-      code: 'ar',
-      label: 'Arabic (العربية)',
-      rtl: true,
-    },
+    // {
+    //   code: 'ja',
+    //   label: 'Japanese (日本語)',
+    // },
+    // {
+    //   code: 'ar',
+    //   label: 'Arabic (العربية)',
+    //   rtl: true,
+    // },
   ],
 }
 

@@ -35,6 +35,9 @@ import { Page, Post } from 'src/payload-types'
 import { searchFields } from '@/search/fieldOverrides'
 import { beforeSyncWithSearch } from '@/search/beforeSync'
 import localization from './i18n/localization'
+import { en } from '@payloadcms/translations/languages/en'
+import { de } from '@payloadcms/translations/languages/de'
+import { es } from '@payloadcms/translations/languages/es'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -199,7 +202,13 @@ export default buildConfig({
     }),
     payloadCloudPlugin(), // storage-adapter-placeholder
   ],
-  localization,
+  localization: {
+    locales: ['en', 'es', 'de'], // required
+    defaultLocale: 'en', // required
+  },
+  i18n: {
+    supportedLanguages: { en, de, es },
+  },
   secret: process.env.PAYLOAD_SECRET!,
   sharp,
   typescript: {
