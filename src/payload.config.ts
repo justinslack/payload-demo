@@ -38,6 +38,13 @@ import localization from './i18n/localization'
 import { en } from '@payloadcms/translations/languages/en'
 import { de } from '@payloadcms/translations/languages/de'
 import { es } from '@payloadcms/translations/languages/es'
+import {
+  translator,
+  copyResolver,
+  googleResolver,
+  openAIResolver,
+  libreResolver,
+} from '@payload-enchants/translator'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -199,6 +206,19 @@ export default buildConfig({
           return [...defaultFields, ...searchFields]
         },
       },
+    }),
+    translator({
+      // collections with the enabled translator in the admin UI
+      collections: ['posts', 'pages'],
+      // globals with the enabled translator in the admin UI
+      globals: [],
+      // add resolvers that you want to include, examples on how to write your own in ./plugin/src/resolvers
+      resolvers: [
+        copyResolver(),
+        openAIResolver({
+          apiKey: process.env.OPENAI_KEY!,
+        }),
+      ],
     }),
     payloadCloudPlugin(), // storage-adapter-placeholder
   ],

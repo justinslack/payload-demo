@@ -6,7 +6,7 @@ The objective is to show how to implement localization in a website. There is no
 
 To facilitate the localization process, this example uses the next-intl library.
 
-## Setup
+##  Setup
 
 1. Run the following command to create a project from the example:
 
@@ -29,7 +29,7 @@ The seed script will also create a demo user for demonstration purposes only:
 
 > NOTICE: seeding the database is destructive because it drops your current database to populate a fresh one from the seed template. Only run this command if you are starting a new project or can afford to lose your current data.
 
-## Important!
+## Important
 
 The seed script only creates translations in English and Spanish, so you will not see the website translated to other languages even if you see them in the dropdown menu.
 

@@ -76,12 +76,12 @@ function LocaleSwitcher() {
 
   return (
     <Select onValueChange={onSelectChange} value={locale}>
-      <SelectTrigger className="w-auto text-sm bg-transparent gap-2 pl-0 md:pl-3 border-none">
+      <SelectTrigger className="w-auto text-sm bg-transparent gap-2 pl-0 md:pl-3 border-none text-white">
         <SelectValue placeholder="Theme" />
       </SelectTrigger>
       <SelectContent>
         {localization.locales
-          .sort((a, b) => a.label.localeCompare(b.label)) // Ordenar por label
+          .sort((a, b) => a.label.localeCompare(b.label))
           .map((locale) => (
             <SelectItem value={locale.code} key={locale.code}>
               {locale.label}
